@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handloom Weavers Collective - Premium Heritage</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .premium-feature {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+        .premium-feature:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+        .premium-feature img {
+            width: 50%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+        .premium-content {
+            width: 50%;
+        }
+        .premium-content h3 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        @media (max-width: 768px) {
+            .premium-feature, .premium-feature:nth-child(even) {
+                flex-direction: column;
+            }
+            .premium-feature img, .premium-content {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-inner">
+            <a href="index.html" class="logo">
+                <svg xmlns="http://www.webkit.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/>
+                    <path d="M18 14h-8"/>
+                    <path d="M15 18h-5"/>
+                    <path d="M10 6h8v4h-8V6Z"/>
+                </svg>
+                Handloom Weavers
+            </a>
+            
+            <button class="icon-btn mobile-menu-btn" id="mobile-menu-btn">
+                <svg xmlns="http://www.webkit.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+            </button>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="home-2.html" class="active">Home Premium</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="fair-trade.html">Fair Trade</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="header-actions">
+                    <button class="icon-btn" id="theme-toggle" aria-label="Toggle Theme"></button>
+                    <button class="icon-btn" id="dir-toggle" aria-label="Toggle Direction"></button>
+                    <a href="contact.html" class="btn btn-primary">Enquire Now</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Premium Hero Section -->
+    <section class="hero hero-premium" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('assets/hero_bg.jpg');">
+        <div class="container">
+            <h1>Exquisite Handwoven Elegance</h1>
+            <p>Elevate your lifestyle with our premium collection of bespoke handloom fabrics, crafted for those who appreciate true artistry and timeless heritage.</p>
+            <div class="hero-actions">
+                <a href="products.html" class="btn btn-primary">View Premium Collection</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 1: The Art of Fine Weaving -->
+    <section>
+        <div class="container">
+            <h2 class="section-title">The Art of Fine Weaving</h2>
+            <p class="section-subtitle">A journey into the heart of luxury and tradition.</p>
+
+            <div class="premium-feature">
+                <img src="https://images.unsplash.com/photo-1605810756787-8153406fb2fb?auto=format&fit=crop&q=80&w=800&h=600" alt="Premium Silk">
+                <div class="premium-content">
+                    <h3>Heritage Silk Collection</h3>
+                    <p>Our premium silk collection represents the pinnacle of handloom craftsmanship. Each piece takes weeks to complete, featuring intricate zari work and motifs inspired by ancient architecture. Perfect for bridal wear and grand occasions.</p>
+                    <a href="products.html" class="btn btn-secondary" style="margin-top: 20px;">Explore Silk</a>
+                </div>
+            </div>
+
+            <div class="premium-feature">
+                <img src="https://images.unsplash.com/photo-1598532213005-59b34208a05c?auto=format&fit=crop&q=80&w=800&h=600" alt="Bespoke Design">
+                <div class="premium-content">
+                    <h3>Bespoke Custom Orders</h3>
+                    <p>Work directly with our master weavers to create a fabric that is uniquely yours. From selecting the finest natural yarns to finalizing the color palette and design, experience the luxury of custom-made handloom.</p>
+                    <a href="contact.html" class="btn btn-secondary" style="margin-top: 20px;">Request Consultation</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Exclusive Gallery -->
+    <section style="background-color: var(--card-bg);">
+        <div class="container">
+            <h2 class="section-title">Exclusive Gallery</h2>
+            <div class="grid">
+                <img src="assets/gallery_1.jpg" alt="Gallery 1" style="width: 100%; border-radius: 8px; box-shadow: var(--shadow);">
+                <img src="assets/gallery_2.jpg" alt="Gallery 2" style="width: 100%; border-radius: 8px; box-shadow: var(--shadow);">
+                <img src="assets/gallery_3.jpg" alt="Gallery 3" style="width: 100%; border-radius: 8px; box-shadow: var(--shadow);">
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Master Artisans Profile -->
+    <section>
+        <div class="container text-center">
+            <h2 class="section-title">Meet Our Master Artisans</h2>
+            <p class="section-subtitle">The award-winning hands behind our finest creations.</p>
+            <div class="grid">
+                <div class="card">
+                    <img src="assets/master_weaver_1.jpg" alt="Master Weaver 1" style="border-radius: 50%; width: 150px; height: 150px; margin: 0 auto 20px;">
+                    <h3>Smt. Meenakshi</h3>
+                    <p>National Award Winner for Silk Weaving Excellence</p>
+                </div>
+                <div class="card">
+                    <img src="assets/master_weaver_2.jpg" alt="Master Weaver 2" style="border-radius: 50%; width: 150px; height: 150px; margin: 0 auto 20px;">
+                    <h3>Sri. Venkatesh</h3>
+                    <p>Pioneer in reviving lost Jamdani techniques</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Sustainability Commitment -->
+    <section style="background-color: var(--card-bg);">
+        <div class="container text-center">
+            <h2 class="section-title">Luxury Meets Sustainability</h2>
+            <p style="max-width: 800px; margin: 0 auto; font-size: 1.1rem;">True luxury shouldn't come at the cost of the environment. Our premium collections are woven using 100% natural, biodegradable fibers and dyed using ancient botanical recipes that produce zero toxic runoff.</p>
+        </div>
+    </section>
+
+    <!-- Section 5: Global Reach -->
+    <section>
+        <div class="container text-center">
+            <h2 class="section-title">Trusted by Boutiques Worldwide</h2>
+            <p style="max-width: 800px; margin: 0 auto 40px; font-size: 1.1rem;">Our premium fabrics adorn the collections of leading ethical fashion brands and exclusive boutiques across the globe. We guarantee uncompromising quality, ethical sourcing, and international shipping.</p>
+            <div class="grid grid-2">
+                <div class="card">
+                    <h3 style="font-size: 2rem; margin-bottom: 10px;">50+</h3>
+                    <p>Global Partners</p>
+                </div>
+                <div class="card">
+                    <h3 style="font-size: 2rem; margin-bottom: 10px;">100%</h3>
+                    <p>Traceable Supply Chain</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Press & Recognition -->
+    <section style="background-color: var(--card-bg);">
+        <div class="container text-center">
+            <h2 class="section-title">In the Press</h2>
+            <div class="grid">
+                <div>
+                    <h3 style="color: var(--primary-color);">Vogue Ethics</h3>
+                    <p>"A masterclass in sustainable luxury."</p>
+                </div>
+                <div>
+                    <h3 style="color: var(--primary-color);">Artisan Monthly</h3>
+                    <p>"Reviving the true essence of Indian handloom."</p>
+                </div>
+                <div>
+                    <h3 style="color: var(--primary-color);">Global Fashion</h3>
+                    <p>"The gold standard for fair trade textiles."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo" style="margin-bottom: 15px;">
+                        Handloom Weavers
+                    </a>
+                    <p>Preserving heritage and empowering artisans through sustainable, fair-trade handloom products.</p>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><svg xmlns="http://www.webkit.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+                        <a href="#" aria-label="Instagram"><svg xmlns="http://www.webkit.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg></a>
+                        <a href="#" aria-label="WhatsApp"><svg xmlns="http://www.webkit.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
+                        <a href="#" aria-label="X (Twitter)"><svg xmlns="http://www.webkit.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l11.733 16h4.267l-11.733 -16z"/><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"/></svg></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="products.html">Our Fabrics</a></li>
+                        <li><a href="fair-trade.html">Fair Trade</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><a href="contact.html">Enquire Now</a></li>
+                        <li>123 Weaver Street, Heritage Town</li>
+                        <li>contact@handloomweavers.org</li>
+                        <li>+1 234 567 8900</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Newsletter</h4>
+                    <p style="margin-bottom: 15px;">Subscribe for updates and weaver stories.</p>
+                    <form action="#" class="footer-newsletter" onsubmit="event.preventDefault(); alert('Subscribed successfully!');">
+                        <input type="email" placeholder="Email address" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Handloom Weavers Collective. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        <svg xmlns="http://www.webkit.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+    </button>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
