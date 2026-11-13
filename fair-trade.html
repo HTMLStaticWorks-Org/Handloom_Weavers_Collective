@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Handloom Weavers Collective - Fair Trade</title>
+    <script>document.documentElement.classList.add('js');</script>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -19,7 +20,7 @@
                 </svg>
                 Handloom Weavers
             </a>
-            
+
             <button class="icon-btn mobile-menu-btn" id="mobile-menu-btn">
                 <svg xmlns="http://www.webkit.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
             </button>
@@ -40,77 +41,99 @@
         </div>
     </header>
 
-    <!-- Page Header (Hero) -->
-    <div style="background-color: var(--card-bg); padding: 60px 0; text-align: center; border-bottom: 1px solid var(--border-color);">
+    <!-- Page Hero
+         Image asset: assets/banner_fairtrade.jpg -->
+    <section class="page-hero" style="background-image: url('assets/banner_fairtrade.jpg');">
         <div class="container">
-            <h1 style="color: var(--primary-color); font-size: 2.5rem; margin-bottom: 10px;">Our Fair Trade Promise</h1>
-            <p style="font-size: 1.1rem; max-width: 600px; margin: 0 auto;">Empowering artisans, protecting the planet, and preserving our cultural heritage.</p>
+            <span class="page-hero__eyebrow">Fair Trade</span>
+            <h1>Our Fair Trade Promise</h1>
+            <p>Empowering artisans, protecting the planet, and preserving our cultural heritage.</p>
         </div>
-    </div>
+    </section>
 
     <!-- Section 1: Fair Trade Pillars -->
-    <section>
+    <section class="section-tint">
         <div class="container">
-            <h2 class="section-title">The Pillars of Our Promise</h2>
+            <h2 class="section-title reveal">The Pillars of Our Promise</h2>
             <div class="grid">
-                <div class="card text-center" style="padding: 40px 20px;">
-                    <svg xmlns="http://www.webkit.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--primary-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom: 20px;"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-                    <h3 style="margin-bottom: 15px;">Fair Wages</h3>
+                <div class="feature-card reveal reveal--delay-1">
+                    <span class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                    </span>
+                    <h3>Fair Wages</h3>
                     <p>We guarantee fair, livable wages to all our weavers, ensuring they can support their families without exploitation.</p>
                 </div>
-                
-                <div class="card text-center" style="padding: 40px 20px;">
-                    <svg xmlns="http://www.webkit.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--primary-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom: 20px;"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-                    <h3 style="margin-bottom: 15px;">Community Support</h3>
+
+                <div class="feature-card reveal reveal--delay-2">
+                    <span class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    </span>
+                    <h3>Community Support</h3>
                     <p>A portion of every sale goes directly into our community fund for healthcare, education, and skill-building programs.</p>
                 </div>
-                
-                <div class="card text-center" style="padding: 40px 20px;">
-                    <svg xmlns="http://www.webkit.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--primary-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom: 20px;"><path d="M12 2.69l5.66 4.2c.2.15.34.39.34.65v9.92a.83.83 0 0 1-.83.83H6.83a.83.83 0 0 1-.83-.83V7.54c0-.26.14-.5.34-.65L12 2.69z"/><path d="M12 2.69A2.1 2.1 0 0 0 10.76 2a2.1 2.1 0 0 0-1.24.69l-5.66 4.2A2.1 2.1 0 0 0 3 8.54v9.92A2.83 2.83 0 0 0 5.83 21h12.34A2.83 2.83 0 0 0 21 18.46V8.54a2.1 2.1 0 0 0-.86-1.65l-5.66-4.2A2.1 2.1 0 0 0 12 2.69z"/><path d="M9 21v-6a3 3 0 0 1 6 0v6"/></svg>
-                    <h3 style="margin-bottom: 15px;">Safe Environment</h3>
+
+                <div class="feature-card reveal reveal--delay-3">
+                    <span class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 4.2c.2.15.34.39.34.65v9.92a.83.83 0 0 1-.83.83H6.83a.83.83 0 0 1-.83-.83V7.54c0-.26.14-.5.34-.65L12 2.69z"/><path d="M9 21v-6a3 3 0 0 1 6 0v6"/></svg>
+                    </span>
+                    <h3>Safe Environment</h3>
                     <p>We maintain safe, clean, and well-lit workspaces. Our model allows many weavers to work from their own homes.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Section 2: Transparent Supply Chain -->
-    <section style="background-color: var(--card-bg);">
+    <!-- Section 2: Transparent Supply Chain
+         Image asset: assets/fairtrade_supply.jpg -->
+    <section>
         <div class="container">
-            <div class="grid grid-2" style="align-items: center;">
-                <div>
-                    <h2 class="section-title" style="text-align: left; margin-bottom: 20px;">100% Transparent Supply Chain</h2>
-                    <p style="margin-bottom: 15px; font-size: 1.1rem;">From the organic cotton fields to the final woven product, we track every step of our supply chain. We eliminate the middlemen, ensuring that the maximum profit goes directly to the artisans who create these beautiful textiles.</p>
-                    <p style="font-size: 1.1rem;">We are committed to full transparency. When you purchase from us, you know exactly where your fabric came from, who made it, and the environmental impact of its creation.</p>
+            <div class="split">
+                <div class="split__media split__media--framed reveal">
+                    <img src="assets/fairtrade_supply.jpg" alt="Natural yarns, raw organic cotton and undyed handloom fabric">
+                    <div class="split__badge">
+                        <strong>0</strong>
+                        <span>Middlemen</span>
+                    </div>
                 </div>
-                <div>
-                    <img src="assets/weaver_silk.jpg" alt="Supply Chain Transparency" style="width: 100%; border-radius: 8px; box-shadow: var(--shadow);">
+                <div class="split__body reveal reveal--delay-1">
+                    <h2 class="section-title">100% Transparent Supply Chain</h2>
+                    <p>From the organic cotton fields to the final woven product, we track every step of our supply chain. We eliminate the middlemen, ensuring that the maximum profit goes directly to the artisans who create these beautiful textiles.</p>
+                    <p>We are committed to full transparency. When you purchase from us, you know exactly where your fabric came from, who made it, and the environmental impact of its creation.</p>
+                    <a href="products.html" class="link-arrow">Discover our fabrics</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Section 3: Empowering Women -->
-    <section>
+    <!-- Section 3: Empowering Women
+         Image asset: assets/women_weavers.jpg -->
+    <section class="section-tint">
         <div class="container text-center">
-            <h2 class="section-title">Empowering Women Artisans</h2>
-            <p style="max-width: 800px; margin: 0 auto 30px; font-size: 1.1rem;">Over 70% of our weavers and artisans are women. By providing them with stable income and leadership opportunities, we are helping to break the cycle of poverty and empowering the next generation of female leaders in rural communities.</p>
-            <img src="assets/women_weavers.jpg" alt="Women Weavers" style="width: 100%; max-width: 1000px; border-radius: 8px; box-shadow: var(--shadow);">
+            <h2 class="section-title reveal">Empowering Women Artisans</h2>
+            <p class="narrow reveal" style="margin-bottom: 44px; font-size: 1.1rem;">Over 70% of our weavers and artisans are women. By providing them with stable income and leadership opportunities, we are helping to break the cycle of poverty and empowering the next generation of female leaders in rural communities.</p>
+            <figure class="wide-figure reveal">
+                <img src="assets/women_weavers.jpg" alt="Women artisans weaving together at handlooms">
+                <figcaption>Women artisans at the heart of the collective &mdash; over 70% of our weaving community.</figcaption>
+            </figure>
         </div>
     </section>
 
     <!-- Section 4: Certification & Impact -->
-    <section style="background-color: var(--card-bg);">
-        <div class="container text-center">
-            <h2 class="section-title">Certified Impact</h2>
-            <div class="grid grid-2">
-                <div style="padding: 20px;">
-                    <h3 style="font-size: 3rem; color: var(--primary-color); margin-bottom: 10px;">GOTS</h3>
-                    <p style="font-size: 1.2rem;">Certified Organic Cotton</p>
+    <section class="band band--deep">
+        <div class="container">
+            <h2 class="section-title reveal">Certified Impact</h2>
+            <div class="stat-strip reveal">
+                <div class="stat">
+                    <strong>GOTS</strong>
+                    <span>Certified Organic Cotton</span>
                 </div>
-                <div style="padding: 20px;">
-                    <h3 style="font-size: 3rem; color: var(--primary-color); margin-bottom: 10px;">100%</h3>
-                    <p style="font-size: 1.2rem;">Ethically Sourced Materials</p>
+                <div class="stat">
+                    <strong>100%</strong>
+                    <span>Ethically Sourced Materials</span>
+                </div>
+                <div class="stat">
+                    <strong>70%+</strong>
+                    <span>Women Artisans</span>
                 </div>
             </div>
         </div>
@@ -126,9 +149,9 @@
                     </a>
                     <p>Preserving heritage and empowering artisans through sustainable, fair-trade handloom products.</p>
                     <div class="social-icons">
-                        <a href="#" aria-label="Facebook"><svg xmlns="http://www.webkit.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
-                        <a href="#" aria-label="Instagram"><svg xmlns="http://www.webkit.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg></a>
-                        <a href="#" aria-label="WhatsApp"><svg xmlns="http://www.webkit.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
+                        <a href="#" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+                        <a href="#" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg></a>
+                        <a href="#" aria-label="WhatsApp"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
                         <a href="#" aria-label="X (Twitter)"><svg xmlns="http://www.webkit.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l11.733 16h4.267l-11.733 -16z"/><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"/></svg></a>
                     </div>
                 </div>
@@ -167,7 +190,7 @@
 
     <!-- Back to Top Button -->
     <button id="backToTop" class="back-to-top" aria-label="Back to top">
-        <svg xmlns="http://www.webkit.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
     </button>
 
     <script src="js/script.js"></script>

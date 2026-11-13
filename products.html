@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Handloom Weavers Collective - Our Products</title>
+    <script>document.documentElement.classList.add('js');</script>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -40,106 +41,129 @@
         </div>
     </header>
 
-    <!-- Page Header (Hero) -->
-    <div style="background-color: var(--card-bg); padding: 60px 0; text-align: center; border-bottom: 1px solid var(--border-color);">
+    <!-- Page Hero
+         Image asset: assets/banner_textiles.jpg -->
+    <section class="page-hero" style="background-image: url('assets/banner_textiles.jpg');">
         <div class="container">
-            <h1 style="color: var(--primary-color); font-size: 2.5rem; margin-bottom: 10px;">Our Fabrics</h1>
-            <p style="font-size: 1.1rem; max-width: 600px; margin: 0 auto;">Explore our curated collection of authentic, handwoven textiles.</p>
+            <span class="page-hero__eyebrow">The Collection</span>
+            <h1>Our Fabrics</h1>
+            <p>Explore our curated collection of authentic, handwoven textiles.</p>
         </div>
-    </div>
+    </section>
 
-    <!-- Section 1: Product Listing (3x3 Grid) -->
+    <!-- Section 1: Product Listing (3x3 Grid)
+         Image assets: assets/product_*.jpg (one per card)
+         Note: each card uses a full-bleed overlay treatment.
+         Replace the <img> src for each product with the final asset. -->
     <section>
         <div class="container">
-            <h2 class="section-title">All Products</h2>
+            <h2 class="section-title reveal">All Products</h2>
             <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
-                <!-- Product 1 -->
-                <div class="card">
-                    <img src="assets/product_silk.jpg" alt="Bridal Silk Saree">
-                    <h3>Bridal Kanchipuram</h3>
-                    <p>Intricately woven with pure gold zari, perfect for weddings.</p>
-                    <a href="contact.html" class="btn btn-secondary">Enquire Price</a>
-                </div>
-                <!-- Product 2 -->
-                <div class="card">
-                    <img src="assets/product_tussar.jpg" alt="Tussar Silk">
-                    <h3>Wild Tussar Silk</h3>
-                    <p>Rich texture and natural gold sheen, ethically sourced.</p>
-                    <a href="contact.html" class="btn btn-secondary">Enquire Price</a>
-                </div>
-                <!-- Product 3 -->
-                <div class="card">
-                    <img src="assets/product_linen.jpg" alt="Soft Silk">
-                    <h3>Soft Silk Drapes</h3>
-                    <p>Lightweight and breathable silk for everyday luxury.</p>
-                    <a href="contact.html" class="btn btn-secondary">Enquire Price</a>
-                </div>
-                <!-- Product 4 -->
-                <div class="card">
-                    <img src="assets/product_cotton.jpg" alt="Cotton Ikat">
-                    <h3>Cotton Ikat</h3>
-                    <p>Traditional resist-dyeing techniques for bold patterns.</p>
-                    <a href="contact.html" class="btn btn-secondary">Enquire Price</a>
-                </div>
-                <!-- Product 5 -->
-                <div class="card">
-                    <img src="assets/product_khadi.jpg" alt="Khadi Cotton">
-                    <h3>Handspun Khadi</h3>
-                    <p>Extremely breathable, handspun, and handwoven.</p>
-                    <a href="contact.html" class="btn btn-secondary">Enquire Price</a>
-                </div>
-                <!-- Product 6 -->
-                <div class="card">
-                    <img src="assets/product_blockprint.jpg" alt="Block Print Cotton">
-                    <h3>Block Printed Cotton</h3>
-                    <p>Natural dyes applied using carved wooden blocks.</p>
-                    <a href="contact.html" class="btn btn-secondary">Enquire Price</a>
-                </div>
-                <!-- Product 7 -->
-                <div class="card">
-                    <img src="assets/product_linen_blend.jpg" alt="Linen Blend">
-                    <h3>Organic Linen Blend</h3>
-                    <p>Perfect for summer, offering unmatched comfort and style.</p>
-                    <a href="contact.html" class="btn btn-secondary">Enquire Price</a>
-                </div>
-                <!-- Product 8 -->
-                <div class="card">
-                    <img src="assets/product_jamdani.jpg" alt="Jamdani Saree">
-                    <h3>Classic Jamdani</h3>
-                    <p>Feather-light fabric with intricate floating motifs.</p>
-                    <a href="contact.html" class="btn btn-secondary">Enquire Price</a>
-                </div>
-                <!-- Product 9 -->
-                <div class="card">
-                    <img src="assets/product_scarf.jpg" alt="Handloom Scarf">
-                    <h3>Artisan Scarves</h3>
-                    <p>A versatile accessory woven from pure organic cotton.</p>
-                    <a href="contact.html" class="btn btn-secondary">Enquire Price</a>
-                </div>
+                <!-- Product 1 — asset: assets/product_silk.jpg -->
+                <article class="card card--overlay reveal">
+                    <img src="assets/product_silk.jpg" alt="Bridal Kanchipuram silk saree with gold zari">
+                    <div class="card__body">
+                        <h3>Bridal Kanchipuram</h3>
+                        <p>Intricately woven with pure gold zari, perfect for weddings.</p>
+                        <a href="contact.html" class="btn btn-secondary">Enquire Price</a>
+                    </div>
+                </article>
+                <!-- Product 2 — asset: assets/product_tussar.jpg -->
+                <article class="card card--overlay reveal reveal--delay-1">
+                    <img src="assets/product_tussar.jpg" alt="Wild tussar silk with natural gold sheen">
+                    <div class="card__body">
+                        <h3>Wild Tussar Silk</h3>
+                        <p>Rich texture and natural gold sheen, ethically sourced.</p>
+                        <a href="contact.html" class="btn btn-secondary">Enquire Price</a>
+                    </div>
+                </article>
+                <!-- Product 3 — asset: assets/product_linen.jpg -->
+                <article class="card card--overlay reveal reveal--delay-2">
+                    <img src="assets/product_linen.jpg" alt="Lightweight soft silk drapes">
+                    <div class="card__body">
+                        <h3>Soft Silk Drapes</h3>
+                        <p>Lightweight and breathable silk for everyday luxury.</p>
+                        <a href="contact.html" class="btn btn-secondary">Enquire Price</a>
+                    </div>
+                </article>
+                <!-- Product 4 — asset: assets/product_cotton.jpg -->
+                <article class="card card--overlay reveal">
+                    <img src="assets/product_cotton.jpg" alt="Handwoven cotton ikat fabric">
+                    <div class="card__body">
+                        <h3>Cotton Ikat</h3>
+                        <p>Traditional resist-dyeing techniques for bold patterns.</p>
+                        <a href="contact.html" class="btn btn-secondary">Enquire Price</a>
+                    </div>
+                </article>
+                <!-- Product 5 — asset: assets/product_khadi.jpg -->
+                <article class="card card--overlay reveal reveal--delay-1">
+                    <img src="assets/product_khadi.jpg" alt="Handspun khadi cotton fabric">
+                    <div class="card__body">
+                        <h3>Handspun Khadi</h3>
+                        <p>Extremely breathable, handspun, and handwoven.</p>
+                        <a href="contact.html" class="btn btn-secondary">Enquire Price</a>
+                    </div>
+                </article>
+                <!-- Product 6 — asset: assets/product_blockprint.jpg -->
+                <article class="card card--overlay reveal reveal--delay-2">
+                    <img src="assets/product_blockprint.jpg" alt="Block printed cotton with natural dyes">
+                    <div class="card__body">
+                        <h3>Block Printed Cotton</h3>
+                        <p>Natural dyes applied using carved wooden blocks.</p>
+                        <a href="contact.html" class="btn btn-secondary">Enquire Price</a>
+                    </div>
+                </article>
+                <!-- Product 7 — asset: assets/product_linen_blend.jpg -->
+                <article class="card card--overlay reveal">
+                    <img src="assets/product_linen_blend.jpg" alt="Organic linen blend fabric">
+                    <div class="card__body">
+                        <h3>Organic Linen Blend</h3>
+                        <p>Perfect for summer, offering unmatched comfort and style.</p>
+                        <a href="contact.html" class="btn btn-secondary">Enquire Price</a>
+                    </div>
+                </article>
+                <!-- Product 8 — asset: assets/product_jamdani.jpg -->
+                <article class="card card--overlay reveal reveal--delay-1">
+                    <img src="assets/product_jamdani.jpg" alt="Classic jamdani saree with floating motifs">
+                    <div class="card__body">
+                        <h3>Classic Jamdani</h3>
+                        <p>Feather-light fabric with intricate floating motifs.</p>
+                        <a href="contact.html" class="btn btn-secondary">Enquire Price</a>
+                    </div>
+                </article>
+                <!-- Product 9 — asset: assets/product_scarf.jpg -->
+                <article class="card card--overlay reveal reveal--delay-2">
+                    <img src="assets/product_scarf.jpg" alt="Handloom organic cotton scarf">
+                    <div class="card__body">
+                        <h3>Artisan Scarves</h3>
+                        <p>A versatile accessory woven from pure organic cotton.</p>
+                        <a href="contact.html" class="btn btn-secondary">Enquire Price</a>
+                    </div>
+                </article>
             </div>
         </div>
     </section>
 
     <!-- Section 2: Custom Orders -->
-    <section style="background-color: var(--card-bg);">
-        <div class="container text-center">
+    <section class="section-tint">
+        <div class="container text-center narrow reveal">
             <h2 class="section-title">Custom Orders & Bulk Sourcing</h2>
-            <p style="max-width: 800px; margin: 0 auto 30px; font-size: 1.1rem;">Are you a designer or boutique owner looking for bespoke handloom fabrics? We offer custom weaving services and bulk discounts for our partners.</p>
-            <a href="contact.html" class="btn btn-primary">Contact for Bulk Orders</a>
+            <p style="margin-bottom: 30px; font-size: 1.1rem;">Are you a designer or boutique owner looking for bespoke handloom fabrics? We offer custom weaving services and bulk discounts for our partners.</p>
+            <a href="contact.html" class="btn btn-primary btn-lg">Contact for Bulk Orders</a>
         </div>
     </section>
 
     <!-- Section 3: Fabric Care Guide -->
     <section>
         <div class="container">
-            <h2 class="section-title">Fabric Care Guide</h2>
+            <h2 class="section-title reveal">Fabric Care Guide</h2>
             <div class="grid grid-2">
-                <div>
-                    <h3 style="color: var(--primary-color); margin-bottom: 10px;">Silk Care</h3>
+                <div class="feature-card reveal">
+                    <h3>Silk Care</h3>
                     <p>Dry clean only. Store in a cool, dry place wrapped in pure cotton fabric. Avoid direct sunlight to maintain the vibrancy of the natural dyes.</p>
                 </div>
-                <div>
-                    <h3 style="color: var(--primary-color); margin-bottom: 10px;">Cotton & Linen Care</h3>
+                <div class="feature-card reveal reveal--delay-1">
+                    <h3>Cotton &amp; Linen Care</h3>
                     <p>Hand wash in cold water with mild detergent. Do not wring or twist. Dry in shade. Iron while slightly damp for the best crisp finish.</p>
                 </div>
             </div>

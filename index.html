@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Handloom Weavers Collective - Home</title>
+    <script>document.documentElement.classList.add('js');</script>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -40,36 +41,101 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero" style="padding: 100px 0;">
-        <div class="container">
-            <h1>Weaving Heritage into Every Thread</h1>
-            <p>Discover authentic, handcrafted fabrics made by generations of skilled weavers. Support fair trade and celebrate the rich legacy of traditional handloom.</p>
-            <div class="hero-actions">
-                <a href="products.html" class="btn btn-primary">Explore Fabrics</a>
-                <a href="fair-trade.html" class="btn btn-secondary">Our Fair Trade Promise</a>
+    <!-- =========================================================
+         HOME HERO — "Atelier Collage" concept
+         Layered composition: blurred photo wash + typographic column
+         + overlapping photographs with a floating glass badge.
+         Image assets (swap these, keep the filenames):
+           • assets/hero_home.jpg        → full-bleed blurred backdrop
+           • assets/gallery_2.jpg        → primary tall portrait (card A)
+           • assets/about_weavers.jpg    → overlapping landscape (card B)
+           • assets/product_jamdani.jpg  → small tilted swatch (card C)
+         ========================================================= -->
+    <section class="hero-home">
+        <div class="hero-home__backdrop" aria-hidden="true" style="background-image: url('assets/hero_home.jpg');"></div>
+        <div class="hero-home__veil" aria-hidden="true"></div>
+        <div class="hero-home__grain" aria-hidden="true"></div>
+
+        <div class="container hero-home__inner">
+            <!-- Typographic column -->
+            <div class="hero-home__copy">
+                <span class="hero-home__kicker">
+                    <span class="hero-home__kicker-dot"></span>
+                    Est. 1995 &middot; Fair Trade Handloom
+                </span>
+                <h1 class="hero-home__title">
+                    Threads of<br>
+                    <span class="hero-home__title-accent">Living Heritage</span>
+                </h1>
+                <p class="hero-home__lead">
+                    Every metre carries a story &mdash; hand-spun yarn, botanical dyes and the
+                    patient hands of master artisans. Discover textiles made to last for generations.
+                </p>
+                <div class="hero-home__actions">
+                    <a href="products.html" class="btn btn-primary btn-lg">Explore the Collection</a>
+                    <a href="fair-trade.html" class="btn btn-secondary">Our Fair Trade Promise</a>
+                </div>
+                <dl class="hero-home__facts">
+                    <div>
+                        <dt>500+</dt>
+                        <dd>Artisan Families</dd>
+                    </div>
+                    <div>
+                        <dt>100%</dt>
+                        <dd>Handwoven</dd>
+                    </div>
+                    <div>
+                        <dt>70%</dt>
+                        <dd>Women Weavers</dd>
+                    </div>
+                </dl>
+            </div>
+
+            <!-- Image collage -->
+            <div class="hero-home__stage">
+                <span class="hero-home__ring" aria-hidden="true"></span>
+
+                <figure class="hero-home__card hero-home__card--a">
+                    <img src="assets/gallery_2.jpg" alt="A zari border taking shape on a traditional pit loom">
+                </figure>
+
+                <figure class="hero-home__card hero-home__card--b">
+                    <img src="assets/about_weavers.jpg" alt="Weavers working together in the collective workshop">
+                </figure>
+
+                <figure class="hero-home__card hero-home__card--c">
+                    <img src="assets/product_jamdani.jpg" alt="Close detail of a handwoven jamdani fabric">
+                </figure>
+
+                <div class="hero-home__badge">
+                    <strong>30 yrs</strong>
+                    <span>of handloom craft</span>
+                </div>
             </div>
         </div>
+        <a href="#stories" class="hero-home__scroll" aria-label="Scroll to content">
+            <svg xmlns="http://www.webkit.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+        </a>
     </section>
 
     <!-- Section 1: Weaver Stories -->
-    <section>
+    <section id="stories">
         <div class="container">
-            <h2 class="section-title">Weaver Stories</h2>
-            <p class="section-subtitle">Meet the artisans keeping our traditions alive.</p>
+            <h2 class="section-title reveal">Weaver Stories</h2>
+            <p class="section-subtitle reveal">Meet the artisans keeping our traditions alive.</p>
             
             <div class="grid">
-                <div class="card">
+                <div class="card reveal reveal--delay-1">
                     <img src="assets/weaver_silk.jpg" alt="Kamala weaving silk">
                     <h3>Kamala's Silk Journey</h3>
                     <p>With over 30 years of experience, Kamala specializes in intricate silk sarees, passing down her knowledge to the younger generation.</p>
                 </div>
-                <div class="card">
+                <div class="card reveal reveal--delay-2">
                     <img src="assets/weaver_cotton.jpg" alt="Raju working on a loom">
                     <h3>Raju's Cotton Craft</h3>
                     <p>Raju comes from a family of cotton weavers. His dedication to sustainable and organic dyes has revolutionized our cotton collection.</p>
                 </div>
-                <div class="card">
+                <div class="card reveal reveal--delay-3">
                     <img src="assets/weaver_mastery.jpg" alt="Lakshmi spinning yarn">
                     <h3>Lakshmi's Mastery</h3>
                     <p>Lakshmi's vibrant patterns tell stories of her village. Every piece she weaves is a unique masterpiece of cultural expression.</p>
@@ -79,20 +145,29 @@
     </section>
 
     <!-- Section 2: Why Choose Us -->
-    <section style="background-color: var(--card-bg);">
+    <section class="section-tint">
         <div class="container text-center">
-            <h2 class="section-title">The Handloom Difference</h2>
+            <h2 class="section-title reveal">The Handloom Difference</h2>
             <div class="grid">
-                <div>
-                    <h3 style="color: var(--primary-color); margin-bottom: 10px;">100% Authentic</h3>
+                <div class="feature-card reveal reveal--delay-1">
+                    <span class="feature-icon">
+                        <svg xmlns="http://www.webkit.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 12 2 2 4-4"/><path d="M12 3 4 6v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6l-8-3Z"/></svg>
+                    </span>
+                    <h3>100% Authentic</h3>
                     <p>Every product is handwoven with care, preserving traditional techniques and authentic quality.</p>
                 </div>
-                <div>
-                    <h3 style="color: var(--primary-color); margin-bottom: 10px;">Fair Trade</h3>
+                <div class="feature-card reveal reveal--delay-2">
+                    <span class="feature-icon">
+                        <svg xmlns="http://www.webkit.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"/><path d="M5 7h9a3 3 0 0 1 0 6H6a3 3 0 0 0 0 6h10"/></svg>
+                    </span>
+                    <h3>Fair Trade</h3>
                     <p>We ensure our weavers receive fair wages, safe working conditions, and respect for their craft.</p>
                 </div>
-                <div>
-                    <h3 style="color: var(--primary-color); margin-bottom: 10px;">Sustainable</h3>
+                <div class="feature-card reveal reveal--delay-3">
+                    <span class="feature-icon">
+                        <svg xmlns="http://www.webkit.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 4 13c0-5 4-9 12-9 0 9-4 12-9 12-1.5 0-3-.5-4-1.5"/><path d="M4 20c3-6 7-8 12-8"/></svg>
+                    </span>
+                    <h3>Sustainable</h3>
                     <p>Using natural fibers and eco-friendly dyes, our process is kind to both the weavers and the earth.</p>
                 </div>
             </div>
@@ -102,83 +177,116 @@
     <!-- Section 3: Featured Collections -->
     <section>
         <div class="container text-center">
-            <h2 class="section-title">Featured Collections</h2>
-            <p class="section-subtitle">Our most loved fabric categories</p>
+            <h2 class="section-title reveal">Featured Collections</h2>
+            <p class="section-subtitle reveal">Our most loved fabric categories</p>
             <div class="grid">
-                <div class="card">
+                <article class="card card--overlay reveal reveal--delay-1">
                     <img src="assets/product_silk.jpg" alt="Silk Collection">
-                    <h3>Pure Silk</h3>
-                    <a href="products.html" class="btn btn-secondary">Shop Silk</a>
-                </div>
-                <div class="card">
+                    <div class="card__body">
+                        <h3>Pure Silk</h3>
+                        <p>Lustrous, handwoven silk with a lifetime of heritage in every fold.</p>
+                        <a href="products.html" class="btn btn-secondary">Shop Silk</a>
+                    </div>
+                </article>
+                <article class="card card--overlay reveal reveal--delay-2">
                     <img src="assets/product_cotton.jpg" alt="Cotton Collection">
-                    <h3>Organic Cotton</h3>
-                    <a href="products.html" class="btn btn-secondary">Shop Cotton</a>
-                </div>
-                <div class="card">
+                    <div class="card__body">
+                        <h3>Organic Cotton</h3>
+                        <p>Breathable, hand-spun cotton grown and dyed without chemicals.</p>
+                        <a href="products.html" class="btn btn-secondary">Shop Cotton</a>
+                    </div>
+                </article>
+                <article class="card card--overlay reveal reveal--delay-3">
                     <img src="assets/product_linen.jpg" alt="Linen Collection">
-                    <h3>Handwoven Linen</h3>
-                    <a href="products.html" class="btn btn-secondary">Shop Linen</a>
-                </div>
+                    <div class="card__body">
+                        <h3>Handwoven Linen</h3>
+                        <p>Cool, textured linen woven on traditional wooden looms.</p>
+                        <a href="products.html" class="btn btn-secondary">Shop Linen</a>
+                    </div>
+                </article>
             </div>
         </div>
     </section>
 
     <!-- Section 4: The Handloom Process -->
-    <section style="background-color: var(--card-bg);">
-        <div class="container text-center">
-            <h2 class="section-title">The Weaving Process</h2>
-            <p class="section-subtitle">From yarn to fabric, everything is done by hand.</p>
-            <div class="grid">
-                <div>
-                    <h3 style="color: var(--primary-color); margin-bottom: 10px;">1. Spinning</h3>
-                    <p>Raw cotton or silk is carefully hand-spun into fine yarn, ensuring strength and natural texture.</p>
+    <section class="section-tint">
+        <div class="container">
+            <div class="split">
+                <div class="split__media split__media--framed reveal">
+                    <img src="assets/product_blockprint.jpg" alt="Traditional wooden blocks and natural dyes used in the handloom process">
+                    <div class="split__badge">
+                        <strong>100%</strong>
+                        <span>Hand made</span>
+                    </div>
                 </div>
-                <div>
-                    <h3 style="color: var(--primary-color); margin-bottom: 10px;">2. Dyeing</h3>
-                    <p>The yarn is naturally dyed using plant-based extracts, creating vibrant and eco-friendly colors.</p>
-                </div>
-                <div>
-                    <h3 style="color: var(--primary-color); margin-bottom: 10px;">3. Weaving</h3>
-                    <p>Master artisans use traditional wooden looms to meticulously weave the yarn into beautiful fabrics.</p>
+                <div class="split__body reveal reveal--delay-1">
+                    <h2 class="section-title">The Weaving Process</h2>
+                    <p>From yarn to fabric, everything is done by hand.</p>
+                    <ul class="step-list">
+                        <li class="step">
+                            <span class="step__num">1</span>
+                            <div>
+                                <h3>Spinning</h3>
+                                <p>Raw cotton or silk is carefully hand-spun into fine yarn, ensuring strength and natural texture.</p>
+                            </div>
+                        </li>
+                        <li class="step">
+                            <span class="step__num">2</span>
+                            <div>
+                                <h3>Dyeing</h3>
+                                <p>The yarn is naturally dyed using plant-based extracts, creating vibrant and eco-friendly colors.</p>
+                            </div>
+                        </li>
+                        <li class="step">
+                            <span class="step__num">3</span>
+                            <div>
+                                <h3>Weaving</h3>
+                                <p>Master artisans use traditional wooden looms to meticulously weave the yarn into beautiful fabrics.</p>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Section 5: Impact Numbers -->
-    <section>
+    <section class="band band--deep">
         <div class="container text-center">
-            <h2 class="section-title">Our Growing Impact</h2>
-            <div class="grid grid-2">
-                <div>
-                    <h3 style="font-size: 3rem; color: var(--primary-color); margin-bottom: 10px;">500+</h3>
-                    <p style="font-size: 1.2rem;">Artisan Families Supported</p>
+            <h2 class="section-title reveal">Our Growing Impact</h2>
+            <div class="stat-strip">
+                <div class="stat reveal reveal--delay-1">
+                    <strong>500+</strong>
+                    <span>Artisan Families Supported</span>
                 </div>
-                <div>
-                    <h3 style="font-size: 3rem; color: var(--primary-color); margin-bottom: 10px;">15,000+</h3>
-                    <p style="font-size: 1.2rem;">Meters of Fabric Woven Annually</p>
+                <div class="stat reveal reveal--delay-2">
+                    <strong>15,000+</strong>
+                    <span>Metres of Fabric Woven Annually</span>
+                </div>
+                <div class="stat reveal reveal--delay-3">
+                    <strong>70%</strong>
+                    <span>Women Artisans in Our Collective</span>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Section 6: Testimonials -->
-    <section style="background-color: var(--card-bg);">
+    <section class="section-tint">
         <div class="container text-center">
-            <h2 class="section-title">What Our Customers Say</h2>
+            <h2 class="section-title reveal">What Our Customers Say</h2>
             <div class="grid">
-                <div class="card">
-                    <p style="font-style: italic;">"The quality of the silk is unmatched. You can truly feel the love and dedication poured into every thread."</p>
-                    <h4 style="margin-top: 15px; color: var(--primary-color);">- Sarah Jenkins</h4>
+                <div class="card card--quote reveal reveal--delay-1">
+                    <p>"The quality of the silk is unmatched. You can truly feel the love and dedication poured into every thread."</p>
+                    <h4>- Sarah Jenkins</h4>
                 </div>
-                <div class="card">
-                    <p style="font-style: italic;">"I love knowing that my purchase directly supports these talented weavers. The organic cotton is so breathable!"</p>
-                    <h4 style="margin-top: 15px; color: var(--primary-color);">- Priya Sharma</h4>
+                <div class="card card--quote reveal reveal--delay-2">
+                    <p>"I love knowing that my purchase directly supports these talented weavers. The organic cotton is so breathable!"</p>
+                    <h4>- Priya Sharma</h4>
                 </div>
-                <div class="card">
-                    <p style="font-style: italic;">"Fast shipping and incredible craftsmanship. The intricate patterns on the Ikat fabric are absolutely stunning."</p>
-                    <h4 style="margin-top: 15px; color: var(--primary-color);">- Michael T.</h4>
+                <div class="card card--quote reveal reveal--delay-3">
+                    <p>"Fast shipping and incredible craftsmanship. The intricate patterns on the Ikat fabric are absolutely stunning."</p>
+                    <h4>- Michael T.</h4>
                 </div>
             </div>
         </div>
@@ -187,10 +295,10 @@
     <!-- Section 7: Newsletter Signup -->
     <section>
         <div class="container text-center">
-            <h2 class="section-title">Join Our Community</h2>
-            <p class="section-subtitle" style="margin-bottom: 30px;">Subscribe to our newsletter for the latest collections and weaver stories.</p>
-            <form action="#" style="max-width: 500px; margin: 0 auto; display: flex; gap: 10px;" onsubmit="event.preventDefault(); alert('Subscribed successfully!');">
-                <input type="email" class="form-control" placeholder="Enter your email address" required style="flex: 1;">
+            <h2 class="section-title reveal">Join Our Community</h2>
+            <p class="section-subtitle reveal" style="margin-bottom: 30px;">Subscribe to our newsletter for the latest collections and weaver stories.</p>
+            <form action="#" style="max-width: 500px; margin: 0 auto; display: flex; gap: 10px; flex-wrap: wrap;" onsubmit="event.preventDefault(); alert('Subscribed successfully!');">
+                <input type="email" class="form-control" placeholder="Enter your email address" required style="flex: 1 1 240px;">
                 <button type="submit" class="btn btn-primary">Subscribe</button>
             </form>
         </div>

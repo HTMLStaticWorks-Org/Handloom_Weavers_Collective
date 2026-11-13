@@ -83,4 +83,29 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+    // Scroll Reveal — progressively lifts .reveal elements into view.
+    // Falls back to showing everything when animation is disabled or unsupported.
+    const revealEls = document.querySelectorAll('.reveal');
+    if (revealEls.length) {
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        if (prefersReducedMotion || !('IntersectionObserver' in window)) {
+            revealEls.forEach((el) => el.classList.add('is-visible'));
+        } else {
+            const revealObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.12,
+                rootMargin: '0px 0px -8% 0px'
+            });
+
+            revealEls.forEach((el) => revealObserver.observe(el));
+        }
+    }
 });

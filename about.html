@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Handloom Weavers Collective - About Us</title>
+    <script>document.documentElement.classList.add('js');</script>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -40,40 +41,48 @@
         </div>
     </header>
 
-    <!-- Page Header (Hero) -->
-    <div style="background-color: var(--card-bg); padding: 60px 0; text-align: center; border-bottom: 1px solid var(--border-color);">
+    <!-- Page Hero
+         Image asset: assets/banner_weaving.jpg -->
+    <section class="page-hero" style="background-image: url('assets/banner_weaving.jpg');">
         <div class="container">
-            <h1 style="color: var(--primary-color); font-size: 2.5rem; margin-bottom: 10px;">About Us</h1>
-            <p style="font-size: 1.1rem; max-width: 600px; margin: 0 auto;">Our history, our mission, and the artisans who make it all possible.</p>
+            <span class="page-hero__eyebrow">The Collective</span>
+            <h1>About Us</h1>
+            <p>Our history, our mission, and the artisans who make it all possible.</p>
         </div>
-    </div>
+    </section>
 
-    <!-- Section 1: Our Story -->
+    <!-- Section 1: Our Story
+         Image asset: assets/about_weavers.jpg -->
     <section>
         <div class="container">
-            <div class="grid grid-2" style="align-items: center;">
-                <div>
-                    <h2 class="section-title" style="text-align: left; margin-bottom: 20px;">Our Story & Expertise</h2>
-                    <p style="margin-bottom: 15px; font-size: 1.1rem;">Founded in 1995, the Handloom Weavers Collective began as a small cooperative of 20 artisan families. Today, we are a thriving community of over 500 weavers dedicated to preserving the ancient art of handloom weaving.</p>
-                    <p style="margin-bottom: 15px; font-size: 1.1rem;">Our expertise spans generations. We specialize in working with pure cotton, wild silk, and organic linen. By combining traditional techniques with contemporary designs, we create fabrics that are not only beautiful but also sustainable and ethically produced.</p>
+            <div class="split">
+                <div class="split__media split__media--framed reveal">
+                    <img src="assets/about_weavers.jpg" alt="Weavers working together">
+                    <div class="split__badge">
+                        <strong>1995</strong>
+                        <span>Founded</span>
+                    </div>
                 </div>
-                <div>
-                    <img src="assets/about_weavers.jpg" alt="Weavers working together" style="width: 100%; border-radius: 8px; box-shadow: var(--shadow);">
+                <div class="split__body reveal reveal--delay-1">
+                    <h2 class="section-title">Our Story &amp; Expertise</h2>
+                    <p>Founded in 1995, the Handloom Weavers Collective began as a small cooperative of 20 artisan families. Today, we are a thriving community of over 500 weavers dedicated to preserving the ancient art of handloom weaving.</p>
+                    <p>Our expertise spans generations. We specialize in working with pure cotton, wild silk, and organic linen. By combining traditional techniques with contemporary designs, we create fabrics that are not only beautiful but also sustainable and ethically produced.</p>
+                    <a href="products.html" class="link-arrow">Explore our fabrics</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Section 2: Mission & Vision -->
-    <section style="background-color: var(--card-bg);">
+    <section class="section-tint">
         <div class="container text-center">
-            <h2 class="section-title">Mission & Vision</h2>
+            <h2 class="section-title reveal">Mission &amp; Vision</h2>
             <div class="grid grid-2">
-                <div class="card" style="border: none; box-shadow: none; background: transparent;">
+                <div class="reveal reveal--delay-1">
                     <h3 style="color: var(--primary-color); font-size: 1.8rem; margin-bottom: 15px;">Our Mission</h3>
                     <p style="font-size: 1.1rem;">To empower handloom weavers by providing them with a fair trade platform, ensuring sustainable livelihoods, and bringing authentic, high-quality handcrafted textiles to the global market.</p>
                 </div>
-                <div class="card" style="border: none; box-shadow: none; background: transparent;">
+                <div class="reveal reveal--delay-2">
                     <h3 style="color: var(--primary-color); font-size: 1.8rem; margin-bottom: 15px;">Our Vision</h3>
                     <p style="font-size: 1.1rem;">A world where traditional craftsmanship is celebrated, where weavers are paid fairly for their art, and where sustainable fashion becomes the norm rather than the exception.</p>
                 </div>
@@ -84,17 +93,17 @@
     <!-- Section 3: Core Values -->
     <section>
         <div class="container text-center">
-            <h2 class="section-title">Our Core Values</h2>
+            <h2 class="section-title reveal">Our Core Values</h2>
             <div class="grid">
-                <div class="card">
+                <div class="card reveal reveal--delay-1">
                     <h3 style="margin-bottom: 10px;">Heritage</h3>
                     <p>We honor and preserve ancient weaving techniques passed down through generations.</p>
                 </div>
-                <div class="card">
+                <div class="card reveal reveal--delay-2">
                     <h3 style="margin-bottom: 10px;">Integrity</h3>
                     <p>We operate with complete transparency in our pricing, sourcing, and labor practices.</p>
                 </div>
-                <div class="card">
+                <div class="card reveal reveal--delay-3">
                     <h3 style="margin-bottom: 10px;">Quality</h3>
                     <p>We never compromise on the quality of our yarns, dyes, or the final woven fabric.</p>
                 </div>
@@ -102,17 +111,18 @@
         </div>
     </section>
 
-    <!-- Section 4: The Community -->
-    <section style="background-color: var(--card-bg);">
+    <!-- Section 4: The Community
+         Image asset: assets/weaver_silk.jpg -->
+    <section class="section-tint">
         <div class="container">
-            <div class="grid grid-2" style="align-items: center;">
-                <div>
-                    <img src="assets/weaver_silk.jpg" alt="Weaving Community" style="width: 100%; border-radius: 8px; box-shadow: var(--shadow);">
+            <div class="split split--reverse">
+                <div class="split__media split__media--framed split__media--aligned reveal">
+                    <img src="assets/weaver_silk.jpg" alt="Weaving Community">
                 </div>
-                <div>
-                    <h2 class="section-title" style="text-align: left; margin-bottom: 20px;">The Weaver Community</h2>
-                    <p style="margin-bottom: 15px; font-size: 1.1rem;">The Handloom Weavers Collective is more than just a business; it is a family. We invest back into our communities by funding local schools, setting up healthcare camps, and providing continuous skill-development workshops.</p>
-                    <p style="font-size: 1.1rem;">When you choose our fabrics, you are directly contributing to the welfare and upliftment of entire artisan villages.</p>
+                <div class="split__body reveal reveal--delay-1">
+                    <h2 class="section-title">The Weaver Community</h2>
+                    <p>The Handloom Weavers Collective is more than just a business; it is a family. We invest back into our communities by funding local schools, setting up healthcare camps, and providing continuous skill-development workshops.</p>
+                    <p>When you choose our fabrics, you are directly contributing to the welfare and upliftment of entire artisan villages.</p>
                 </div>
             </div>
         </div>

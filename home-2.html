@@ -4,41 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Handloom Weavers Collective - Premium Heritage</title>
+    <script>document.documentElement.classList.add('js');</script>
     <link rel="stylesheet" href="css/style.css">
-    <style>
-        .premium-feature {
-            display: flex;
-            align-items: center;
-            gap: 40px;
-            margin-bottom: 60px;
-        }
-        .premium-feature:nth-child(even) {
-            flex-direction: row-reverse;
-        }
-        .premium-feature img {
-            width: 50%;
-            height: 400px;
-            object-fit: cover;
-            border-radius: 8px;
-            box-shadow: var(--shadow);
-        }
-        .premium-content {
-            width: 50%;
-        }
-        .premium-content h3 {
-            font-size: 2rem;
-            color: var(--primary-color);
-            margin-bottom: 20px;
-        }
-        @media (max-width: 768px) {
-            .premium-feature, .premium-feature:nth-child(even) {
-                flex-direction: column;
-            }
-            .premium-feature img, .premium-content {
-                width: 100%;
-            }
-        }
-    </style>
 </head>
 <body>
     <!-- Header -->
@@ -74,13 +41,41 @@
         </div>
     </header>
 
-    <!-- Premium Hero Section -->
-    <section class="hero hero-premium" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('assets/hero_bg.jpg');">
+    <!-- Premium Hero Section
+         Image asset: assets/hero_premium.jpg  (replace with the original asset using the same name) -->
+    <section class="hero hero--editorial" style="background-image: url('assets/hero_premium.jpg');">
         <div class="container">
-            <h1>Exquisite Handwoven Elegance</h1>
-            <p>Elevate your lifestyle with our premium collection of bespoke handloom fabrics, crafted for those who appreciate true artistry and timeless heritage.</p>
-            <div class="hero-actions">
-                <a href="products.html" class="btn btn-primary">View Premium Collection</a>
+            <div class="hero__grid">
+                <div class="hero__content">
+                    <span class="hero__eyebrow">The Premium Collection</span>
+                    <div class="hero__rule"></div>
+                    <h1>Exquisite Handwoven Elegance</h1>
+                    <p class="hero__lead">Elevate your lifestyle with our premium collection of bespoke handloom fabrics, crafted for those who appreciate true artistry and timeless heritage.</p>
+                    <div class="hero-actions">
+                        <a href="products.html" class="btn btn-primary btn-lg">View Premium Collection</a>
+                        <a href="contact.html" class="btn btn-secondary">Book a Consultation</a>
+                    </div>
+                    <ul class="hero__list">
+                        <li>Bespoke commissions woven to your design</li>
+                        <li>Heritage gold zari and Jamdani techniques</li>
+                        <li>Insured worldwide shipping &amp; certification</li>
+                    </ul>
+                </div>
+                <aside class="hero__panel">
+                    <p class="hero__panel-label">Signature Weave</p>
+                    <h3>Kanchipuram Zari</h3>
+                    <p>Each metre is handwoven over six weeks on a traditional pit loom, finished by a single master artisan.</p>
+                    <div class="hero__panel-stats">
+                        <div>
+                            <strong>50+</strong>
+                            <span>Global Partners</span>
+                        </div>
+                        <div>
+                            <strong>100%</strong>
+                            <span>Traceable</span>
+                        </div>
+                    </div>
+                </aside>
             </div>
         </div>
     </section>
@@ -88,37 +83,54 @@
     <!-- Section 1: The Art of Fine Weaving -->
     <section>
         <div class="container">
-            <h2 class="section-title">The Art of Fine Weaving</h2>
-            <p class="section-subtitle">A journey into the heart of luxury and tradition.</p>
+            <h2 class="section-title reveal">The Art of Fine Weaving</h2>
+            <p class="section-subtitle reveal">A journey into the heart of luxury and tradition.</p>
 
-            <div class="premium-feature">
-                <img src="https://images.unsplash.com/photo-1605810756787-8153406fb2fb?auto=format&fit=crop&q=80&w=800&h=600" alt="Premium Silk">
-                <div class="premium-content">
-                    <h3>Heritage Silk Collection</h3>
-                    <p>Our premium silk collection represents the pinnacle of handloom craftsmanship. Each piece takes weeks to complete, featuring intricate zari work and motifs inspired by ancient architecture. Perfect for bridal wear and grand occasions.</p>
-                    <a href="products.html" class="btn btn-secondary" style="margin-top: 20px;">Explore Silk</a>
+            <!-- Image asset: assets/premium_silk.jpg -->
+            <div class="split" style="margin-bottom: clamp(56px, 7vw, 96px);">
+                <div class="split__media split__media--framed reveal">
+                    <img src="assets/premium_silk.jpg" alt="Premium handwoven silk with gold zari work">
+                </div>
+                <div class="split__body reveal reveal--delay-1">
+                    <h3 class="section-title">Heritage Silk Collection</h3>
+                    <p>Our premium silk collection represents the pinnacle of handloom craftsmanship. Each piece takes weeks to complete, featuring intricate zari work and motifs inspired by ancient architecture.</p>
+                    <p>Perfect for bridal wear and grand occasions.</p>
+                    <a href="products.html" class="btn btn-secondary">Explore Silk</a>
                 </div>
             </div>
 
-            <div class="premium-feature">
-                <img src="https://images.unsplash.com/photo-1598532213005-59b34208a05c?auto=format&fit=crop&q=80&w=800&h=600" alt="Bespoke Design">
-                <div class="premium-content">
-                    <h3>Bespoke Custom Orders</h3>
+            <!-- Image asset: assets/premium_bespoke.jpg -->
+            <div class="split split--reverse">
+                <div class="split__media split__media--framed split__media--aligned reveal">
+                    <img src="assets/premium_bespoke.jpg" alt="Bespoke handloom fabric being designed">
+                </div>
+                <div class="split__body reveal reveal--delay-1">
+                    <h3 class="section-title">Bespoke Custom Orders</h3>
                     <p>Work directly with our master weavers to create a fabric that is uniquely yours. From selecting the finest natural yarns to finalizing the color palette and design, experience the luxury of custom-made handloom.</p>
-                    <a href="contact.html" class="btn btn-secondary" style="margin-top: 20px;">Request Consultation</a>
+                    <a href="contact.html" class="btn btn-secondary">Request Consultation</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Section 2: Exclusive Gallery -->
-    <section style="background-color: var(--card-bg);">
+    <section class="section-tint">
         <div class="container">
-            <h2 class="section-title">Exclusive Gallery</h2>
-            <div class="grid">
-                <img src="assets/gallery_1.jpg" alt="Gallery 1" style="width: 100%; border-radius: 8px; box-shadow: var(--shadow);">
-                <img src="assets/gallery_2.jpg" alt="Gallery 2" style="width: 100%; border-radius: 8px; box-shadow: var(--shadow);">
-                <img src="assets/gallery_3.jpg" alt="Gallery 3" style="width: 100%; border-radius: 8px; box-shadow: var(--shadow);">
+            <h2 class="section-title reveal">Exclusive Gallery</h2>
+            <p class="section-subtitle reveal">Details from the loom room, captured up close.</p>
+            <div class="gallery-mosaic">
+                <figure class="reveal reveal--delay-1">
+                    <img src="assets/gallery_1.jpg" alt="Handwoven textile detail">
+                    <figcaption>Natural yarns, hand-spun in the workshop</figcaption>
+                </figure>
+                <figure class="reveal reveal--delay-2">
+                    <img src="assets/gallery_2.jpg" alt="Loom in progress">
+                    <figcaption>A zari border taking shape on the pit loom</figcaption>
+                </figure>
+                <figure class="reveal reveal--delay-3">
+                    <img src="assets/gallery_3.jpg" alt="Finished handloom fabric">
+                    <figcaption>Finished fabric, ready for its final inspection</figcaption>
+                </figure>
             </div>
         </div>
     </section>
@@ -126,64 +138,71 @@
     <!-- Section 3: Master Artisans Profile -->
     <section>
         <div class="container text-center">
-            <h2 class="section-title">Meet Our Master Artisans</h2>
-            <p class="section-subtitle">The award-winning hands behind our finest creations.</p>
+            <h2 class="section-title reveal">Meet Our Master Artisans</h2>
+            <p class="section-subtitle reveal">The award-winning hands behind our finest creations.</p>
             <div class="grid">
-                <div class="card">
-                    <img src="assets/master_weaver_1.jpg" alt="Master Weaver 1" style="border-radius: 50%; width: 150px; height: 150px; margin: 0 auto 20px;">
+                <div class="card artisan-card reveal reveal--delay-1">
+                    <img class="artisan-avatar" src="assets/master_weaver_1.jpg" alt="Master Weaver Meenakshi">
                     <h3>Smt. Meenakshi</h3>
                     <p>National Award Winner for Silk Weaving Excellence</p>
+                    <span class="artisan-tag">Silk &amp; Zari</span>
                 </div>
-                <div class="card">
-                    <img src="assets/master_weaver_2.jpg" alt="Master Weaver 2" style="border-radius: 50%; width: 150px; height: 150px; margin: 0 auto 20px;">
+                <div class="card artisan-card reveal reveal--delay-2">
+                    <img class="artisan-avatar" src="assets/master_weaver_2.jpg" alt="Master Weaver Venkatesh">
                     <h3>Sri. Venkatesh</h3>
                     <p>Pioneer in reviving lost Jamdani techniques</p>
+                    <span class="artisan-tag">Jamdani</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Section 4: Sustainability Commitment -->
-    <section style="background-color: var(--card-bg);">
-        <div class="container text-center">
-            <h2 class="section-title">Luxury Meets Sustainability</h2>
-            <p style="max-width: 800px; margin: 0 auto; font-size: 1.1rem;">True luxury shouldn't come at the cost of the environment. Our premium collections are woven using 100% natural, biodegradable fibers and dyed using ancient botanical recipes that produce zero toxic runoff.</p>
+    <!-- Section 4: Sustainability Commitment
+         Image asset: assets/band_sustainability.jpg -->
+    <section class="band" style="background-image: url('assets/band_sustainability.jpg');">
+        <div class="container">
+            <h2 class="section-title reveal">Luxury Meets Sustainability</h2>
+            <p class="narrow reveal">True luxury shouldn't come at the cost of the environment. Our premium collections are woven using 100% natural, biodegradable fibers and dyed using ancient botanical recipes that produce zero toxic runoff.</p>
         </div>
     </section>
 
     <!-- Section 5: Global Reach -->
-    <section>
+    <section class="section-tint">
         <div class="container text-center">
-            <h2 class="section-title">Trusted by Boutiques Worldwide</h2>
-            <p style="max-width: 800px; margin: 0 auto 40px; font-size: 1.1rem;">Our premium fabrics adorn the collections of leading ethical fashion brands and exclusive boutiques across the globe. We guarantee uncompromising quality, ethical sourcing, and international shipping.</p>
-            <div class="grid grid-2">
-                <div class="card">
-                    <h3 style="font-size: 2rem; margin-bottom: 10px;">50+</h3>
-                    <p>Global Partners</p>
+            <h2 class="section-title reveal">Trusted by Boutiques Worldwide</h2>
+            <p class="narrow reveal" style="margin-bottom: 44px;">Our premium fabrics adorn the collections of leading ethical fashion brands and exclusive boutiques across the globe. We guarantee uncompromising quality, ethical sourcing, and international shipping.</p>
+            <div class="stat-strip">
+                <div class="stat stat--light reveal reveal--delay-1">
+                    <strong>50+</strong>
+                    <span>Global Partners</span>
                 </div>
-                <div class="card">
-                    <h3 style="font-size: 2rem; margin-bottom: 10px;">100%</h3>
-                    <p>Traceable Supply Chain</p>
+                <div class="stat stat--light reveal reveal--delay-2">
+                    <strong>100%</strong>
+                    <span>Traceable Supply Chain</span>
+                </div>
+                <div class="stat stat--light reveal reveal--delay-3">
+                    <strong>6 Weeks</strong>
+                    <span>Average Weaving Time per Piece</span>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Section 6: Press & Recognition -->
-    <section style="background-color: var(--card-bg);">
+    <section>
         <div class="container text-center">
-            <h2 class="section-title">In the Press</h2>
+            <h2 class="section-title reveal">In the Press</h2>
             <div class="grid">
-                <div>
-                    <h3 style="color: var(--primary-color);">Vogue Ethics</h3>
+                <div class="card card--quote reveal reveal--delay-1">
+                    <h3 style="font-size: 1.25rem;">Vogue Ethics</h3>
                     <p>"A masterclass in sustainable luxury."</p>
                 </div>
-                <div>
-                    <h3 style="color: var(--primary-color);">Artisan Monthly</h3>
+                <div class="card card--quote reveal reveal--delay-2">
+                    <h3 style="font-size: 1.25rem;">Artisan Monthly</h3>
                     <p>"Reviving the true essence of Indian handloom."</p>
                 </div>
-                <div>
-                    <h3 style="color: var(--primary-color);">Global Fashion</h3>
+                <div class="card card--quote reveal reveal--delay-3">
+                    <h3 style="font-size: 1.25rem;">Global Fashion</h3>
                     <p>"The gold standard for fair trade textiles."</p>
                 </div>
             </div>
