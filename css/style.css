@@ -158,6 +158,12 @@ header {
     padding: 5px;
 }
 
+/* Hamburger: hidden by default (desktop shows full nav).
+   Shown only below 1100px via the responsive block. */
+.mobile-menu-btn {
+    display: none;
+}
+
 /* ---------- 4. Buttons & pills ---------- */
 .btn {
     padding: 12px 24px;
@@ -260,7 +266,7 @@ header {
     display: flex;
     align-items: center;
     min-height: 620px;
-    padding: clamp(110px, 15vw, 190px) 0 clamp(90px, 12vw, 160px);
+    padding: clamp(84px, 9vw, 130px) 0 clamp(72px, 8vw, 110px);
 }
 
 /* Layer 1 — colour wash that guarantees text contrast + fades the photo edges */
@@ -430,7 +436,7 @@ header {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding: clamp(80px, 11vw, 130px) 0 clamp(64px, 8vw, 104px);
+    padding: clamp(66px, 7vw, 96px) 0 clamp(56px, 6vw, 84px);
 }
 .page-hero::before {
     content: "";
@@ -485,7 +491,7 @@ header {
     display: flex;
     align-items: center;
     min-height: 640px;
-    padding: clamp(112px, 13vw, 172px) 0 clamp(96px, 11vw, 150px);
+    padding: clamp(84px, 9vw, 130px) 0 clamp(72px, 8vw, 110px);
     color: #fff;
     background-color: #1c120e;
 }
@@ -815,7 +821,7 @@ header {
 }
 
 @media (max-width: 640px) {
-    .hero-home { padding-top: 104px; }
+    .hero-home { padding-top: 80px; }
     .hero-home__facts > div { padding-inline: 18px; }
     .hero-home__facts dt { font-size: 1.3rem; }
     .hero-home__ring { display: none; }
@@ -1430,6 +1436,26 @@ html.js .reveal--delay-3 { transition-delay: 0.36s; }
 }
 
 /* ---------- 14. Responsive ---------- */
+
+/* Nav switches to hamburger at 1100px and below */
+@media (max-width: 1100px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: var(--header-bg);
+        padding: 20px;
+        border-bottom: 1px solid var(--border-color);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        gap: 16px;
+    }
+    .nav-links.active { display: flex; }
+    .mobile-menu-btn { display: block; }
+}
+
 @media (max-width: 992px) {
     .hero--editorial .hero__grid { grid-template-columns: 1fr; gap: 42px; }
     .hero__panel { max-width: 520px; }
@@ -1442,20 +1468,6 @@ html.js .reveal--delay-3 { transition-delay: 0.36s; }
 }
 
 @media (max-width: 768px) {
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background-color: var(--header-bg);
-        padding: 20px;
-        border-bottom: 1px solid var(--border-color);
-        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    }
-    .nav-links.active { display: flex; }
-    .mobile-menu-btn { display: block; }
     .contact-grid { grid-template-columns: 1fr; }
 
     .hero { min-height: 520px; }
